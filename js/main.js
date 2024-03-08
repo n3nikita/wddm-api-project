@@ -119,3 +119,36 @@ $('#domain-search').submit(function(e) {
     }
   });
 });
+
+const OPENAI_API_KEY = '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';
+
+const endpoint = 'https://api.openai.com/v1/chat/completions';
+const data = {
+  model: "gpt-3.5-turbo-0613",
+  messages: [
+    {
+      role: "system",
+      content: "You are a helpful assistant. Writing emails on behalf of Jerome Ricketts, who is the lead seo and backlink manager at Zip Webs, a leading digital marketing agency"
+    },
+    {
+      role: "user",
+      content: "Write me an impressive outreach email the will reach out to .${emailData.first_name} from ${data.data.organization} that has access to the domain name ${data.data.domain}"
+    }
+  ]
+};
+
+fetch(endpoint, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${OPENAI_API_KEY}`
+  },
+  body: JSON.stringify(data)
+})
+.then(response => response.json())
+.then(data => {
+  console.log(data);
+})
+.catch(error => {
+  console.error('Error:', error);
+});
