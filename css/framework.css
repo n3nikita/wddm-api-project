@@ -53,3 +53,23 @@ input{
   line-height:normal
 }
 
+@media print{
+  *,*:before,*:after{
+      color:#000!important;
+      text-shadow:none!important;
+      background:0 0!important;
+      box-shadow:none!important
+  }
+  a,a:visited{
+      text-decoration:underline
+  }
+  a[href]:after{
+      content:" (" attr(href) ")"
+  }
+  img{
+      page-break-inside:avoid
+  }
+  img{
+      max-width:100%!important
+  }
+}
