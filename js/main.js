@@ -81,4 +81,41 @@ $('#domain-search').submit(function(e) {
   
           };
   
- 
+          $.ajax({
+            url: 'https://zipwebs.com/wp-json/uap/v2/uap-52508-52509',
+            type: 'POST',
+            headers: {
+                'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiSHVtYmVyIiwibmFtZSI6Ikh1bWJlciIsIkFQSV9USU1FIjoxNzA4NTk5NjQxfQ.5uz85AuQHejSSDFBcLb9qncrPaYsS82_y501YIVRuPQ',
+                'Content-Type': 'application/json'
+            },
+            data: JSON.stringify(postData),
+            success: function(response) {
+                console.log('Data sent successfully to CRM.');
+                // Optionally, show a success message to the user
+            },
+            error: function(xhr, status, error) {
+                console.error('Error sending data to CRM:', error);
+                // Optionally, show an error message to the user
+            }
+        });
+        var $this = $(this);
+      
+      // Disable the button immediately upon click to prevent multiple sends
+      $this.prop('disabled', true);
+
+      // Wait for 2 seconds before changing the button
+      setTimeout(function() {
+          // Create a new <p> element with the desired text
+          var $p = $('<p></p>').text('Lead Sent to CRM');
+          
+          // Replace the clicked button with the new <p> element
+          // You could also choose to hide the button and insert the <p> element next to it, depending on your needs
+          $this.replaceWith($p);
+      }, 2000); // 2000 milliseconds = 2 seconds
+      });
+    },
+    error: function(xhr, status, error) {
+      $('#results').html(`<div class="alert alert-danger" role="alert">Error fetching data: ${error}</div>`);
+    }
+  });
+});
