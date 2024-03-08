@@ -1,0 +1,55 @@
+/*!* Bootstrap v3.4.1 (https://getbootstrap.com/) * Copyright 2011-2019 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)*/
+/*!normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css*/
+html{
+  font-family:sans-serif;
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%
+}
+body{
+  margin:0
+}
+header,nav{
+  display:block
+}
+a{
+  background-color:transparent
+}
+a:active,a:hover{
+  outline:0
+}
+strong{
+  font-weight:700
+}
+h1{
+  font-size:2em;
+  margin:.67em 0
+}
+img{
+  border:0
+}
+svg:not(:root){
+  overflow:hidden
+}
+button,input{
+  color:inherit;
+  font:inherit;
+  margin:0
+}
+button{
+  overflow:visible
+}
+button{
+  text-transform:none
+}
+button{
+  
+  cursor:pointer
+}
+button::-moz-focus-inner,input::-moz-focus-inner{
+  border:0;
+  padding:0
+}
+input{
+  line-height:normal
+}
+
