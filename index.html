@@ -64,3 +64,38 @@
         </li>
      </ul>
   </header>
+  <div id="cio-banner"></div>
+      <div class="dashboard-body">
+         <div class="container">
+            <header class="page-header">
+               <h1 class="page-title">
+                  Email Finder
+               </h1>
+            </header>
+            <turbo-frame id="ola_search">
+               <span >
+                  <form id="domain-search" action="." method="GET"> 
+                     <div class="ds-form">
+                        <div class="ds-search">
+                           <div class="ds-search-result">
+                              <img class="ds-search-result__logo"  src="./images/presearch.svg">
+                              <input autocomplete="off" autofocus="" class="ds-search-result__input" id="domain-field" placeholder="Enter the domain name you'd like to lookup…" required="required" type="text" value=""  required>
+                           </div>
+
+                           <button class="ds-search__submit" type="submit" value="Search">
+                           <span class="far fa-search"></span>
+                           </button>
+                        </div>
+
+                     </div>
+                  </form>
+               </span>
+            </turbo-frame>
+
+            <div class="card-grid-container mt-5">
+               <div id="results" class="mt-3"></div>
+             </div>
+            
+         </div>
+      </div>
+    </div>
