@@ -1,0 +1,47 @@
+<%- include('partials/head', {page: 'Home' }) %>
+<%- include('partials/header', {page: 'Home' }) %>
+        <!--================================banner section start ===========================  -->
+        <div class="banner-about tran5s wow fadeInUp"
+            style="background: linear-gradient(90deg, #7B7B7B 0%, rgba(84, 81, 81, 0.73) 23.44%, rgba(27, 25, 25, 0.00) 100%), url('images/banner/banner-05.png') center center no-repeat;">
+            <div class="container pt-130 pb-50 md-pt-130 md-pb-50">
+                <div class="row d-flex align-items-center">
+                    <div class="text-center">
+                        <h2 class="h2 mb-20 md-mb-10 position-relative">Send Message</h2>
+                        <p class=""><a href="" class="">Home - Send Message</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--================================banner section end ===========================  -->
+
+        <section>
+            <a href="messages">Read user messages</a>
+
+            <form class="p-5" action="send" method="post">
+                <div class="row gy-3 gy-md-4 overflow-hidden">
+                    <div class="col-12">
+                        <label for="title" class="form-label">Title<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" name="title" id="title" value="" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="message" class="form-label">Message<span class="text-danger">*</span></label>
+                        <textarea placeholder="Type your message..." type="text" class="form-control" name="message" id="message" value="" required></textarea>
+                    </div>
+                    <div class="col-12">
+                        <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com"
+                            required>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-grid">
+                            <button class="btn bsb-btn-xl btn-primary" type="submit">Send Message</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+
+
+<%- include('partials/footer', {page: 'Home' }) %>
