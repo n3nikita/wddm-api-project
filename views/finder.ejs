@@ -1,0 +1,50 @@
+<%- include('partials/head', {page: 'Home'}) %>
+<%- include('partials/header', {page: 'Home'}) %>	
+			<!--================================banner section start ===========================  -->
+            <div class="banner-about tran5s wow fadeInUp" style="background: linear-gradient(90deg, #7B7B7B 0%, rgba(84, 81, 81, 0.73) 23.44%, rgba(27, 25, 25, 0.00) 100%), url('images/banner/banner-05.png') center center no-repeat;">
+                <div class="container pt-130 pb-50 md-pt-130 md-pb-50">
+                    <div class="row d-flex align-items-center">
+                        <div class="text-center">
+                            <h2 class="h2 mb-20 md-mb-10 position-relative">Email Finder</h2>
+                            <p class=""><a href="" class="">Home - Finder</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+			<!--================================banner section end ===========================  -->
+
+<div class="dashboard-body">
+    <div class="container">
+       <header class="page-header">
+
+       </header>
+       <turbo-frame id="ola_search">
+          <span >
+             <form id="domain-search" action="." method="GET"> 
+                <div class="ds-form">
+                   <div class="ds-search">
+                      <div class="ds-search-result">
+                         <img class="ds-search-result__logo"  src="./images/presearch.svg">
+                         <input autocomplete="off" autofocus="" class="ds-search-result__input" id="domain-field" placeholder="Enter the domain name you'd like to lookup…" required="required" type="text" value=""  required>
+                      </div>
+
+                      <button class="ds-search__submit" type="submit" value="Search">
+                      <span class="far fa-search"></span>
+                      </button>
+                   </div>
+
+                </div>
+             </form>
+          </span>
+       </turbo-frame>
+
+       <div class="card-grid-container mt-5">
+          <div id="results" class="mt-3"></div>
+        </div>
+       
+    </div>
+ </div>
+
+
+<%- include('partials/footer', {page: 'Home'}) %>
