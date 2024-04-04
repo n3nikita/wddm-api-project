@@ -1,2 +1,7 @@
 node_modules
+<<<<<<< HEAD
 service.json
+=======
+service.json
+>>>>>>> 537689469f28ab1ce985e58ae37d2ec4cac8a4c5
+public/js/main.js

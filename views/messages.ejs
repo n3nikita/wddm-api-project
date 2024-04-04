@@ -1,0 +1,32 @@
+<%- include('partials/head', {page: 'Home'}) %>
+<%- include('partials/header', {page: 'Home'}) %>	
+			<!--================================banner section start ===========================  -->
+        <div class="container"> 
+            <div class="banner-about tran5s wow fadeInUp" style="background: linear-gradient(90deg, #7B7B7B 0%, rgba(84, 81, 81, 0.73) 23.44%, rgba(27, 25, 25, 0.00) 100%), url('images/banner/banner-05.png') center center no-repeat;">
+        <div class="container pt-130 pb-50 md-pt-130 md-pb-50">
+            <div class="row d-flex align-items-center">
+                <div class="text-center">
+                    <h2 class="h2 mb-20 md-mb-10 position-relative">Messages</h2>
+                    <p class=""><a href="" class="">Home - Messages</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--================================banner section end ===========================  -->
+
+<section>
+    <a href="send">Send your message</a>
+    <% for(var i=0; i < Object.keys(data).length; i++) { %>
+       <div class="px-5">
+         <h5><%= data[i].title %></h5>
+         <p><%= data[i].message %></p>
+         <i>From: <%= data[i].user %></i>
+       </div>
+       <hr>
+    <% } %>
+</section>
+
+</div>
+
+<%- include('partials/footer', {page: 'Home'}) %>

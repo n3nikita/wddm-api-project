@@ -122,7 +122,7 @@ $('#domain-search').submit(function(e) {
   
   
   
-  
+   
   const OPENAI_API_KEY = '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';
   
   const endpoint = 'https://api.openai.com/v1/chat/completions';
